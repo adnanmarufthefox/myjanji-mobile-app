@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/dashboard_provider.dart';
+import '../../data/models/dashboard_model.dart';
 import '../../../authentication/presentation/providers/auth_provider.dart';
 import 'package:myjanji/app_router.dart';
 import 'package:myjanji/core/constants/app_constants.dart';
 
 /// Dashboard screen
 class DashboardScreen extends ConsumerWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+  const DashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -111,7 +112,7 @@ class DashboardScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildProgressCard(BuildContext context, dynamic dashboard) {
+  Widget _buildProgressCard(BuildContext context, DashboardModel dashboard) {
     final progress = dashboard.completedSteps / dashboard.totalSteps;
 
     return Card(
@@ -141,7 +142,7 @@ class DashboardScreen extends ConsumerWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              'Status: ${dashboard.verificationStatus.name.toUpperCase()}',
+              'Status: ${dashboard.verificationStatus.toString().split('.').last.toUpperCase()}',
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
@@ -188,7 +189,7 @@ class DashboardScreen extends ConsumerWidget {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor.withOpacity(0.1),
+                        color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Icon(

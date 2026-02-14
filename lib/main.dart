@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/di/service_locator.dart';
 import 'core/theme/app_theme.dart';
 import 'app_router.dart';
@@ -9,11 +10,11 @@ void main() async {
   // Initialize service locator for dependency injection
   setupServiceLocator();
 
-  runApp(const MyJanjiApp());
+  runApp(const ProviderScope(child: MyJanjiApp()));
 }
 
 class MyJanjiApp extends StatelessWidget {
-  const MyJanjiApp({Key? key}) : super(key: key);
+  const MyJanjiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class MyJanjiApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const SplashScreen(),
+      initialRoute: AppRoutes.splash,
       routes: appRoutes,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );

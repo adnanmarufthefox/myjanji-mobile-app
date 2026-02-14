@@ -5,13 +5,14 @@ import 'package:myjanji/app_router.dart';
 
 /// Splash screen shown on app startup
 class SplashScreen extends ConsumerWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen(currentUserProvider, (previous, next) {
       // Navigate based on user state
       Future.delayed(const Duration(seconds: 2), () {
+        if (!context.mounted) return;
         if (next != null) {
           Navigator.of(context).pushReplacementNamed(AppRoutes.dashboard);
         } else {

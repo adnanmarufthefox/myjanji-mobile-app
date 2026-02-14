@@ -1,5 +1,5 @@
 import 'package:myjanji/core/utils/logger.dart';
-import 'auth_service.dart';
+import '../services/auth_service.dart';
 import '../models/user_model.dart';
 import '../models/login_request.dart';
 

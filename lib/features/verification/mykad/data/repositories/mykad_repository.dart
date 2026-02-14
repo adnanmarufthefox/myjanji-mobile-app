@@ -1,5 +1,5 @@
 import 'package:myjanji/core/utils/logger.dart';
-import 'mykad_service.dart';
+import '../services/mykad_service.dart';
 import '../models/mykad_model.dart';
 
 /// MyKad verification repository

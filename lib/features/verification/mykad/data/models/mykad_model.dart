@@ -29,7 +29,7 @@ class MyKadModel {
       address: json['address'] as String,
       imageUrl: json['imageUrl'] as String,
       status: MyKadStatus.values.firstWhere(
-            (status) => status.name == json['status'],
+            (status) => status.toString().split('.').last == json['status'],
         orElse: () => MyKadStatus.pending,
       ),
       submittedAt: DateTime.parse(json['submittedAt'] as String),
@@ -43,7 +43,7 @@ class MyKadModel {
     'dateOfBirth': dateOfBirth.toIso8601String(),
     'address': address,
     'imageUrl': imageUrl,
-    'status': status.name,
+    'status': status.toString().split('.').last,
     'submittedAt': submittedAt.toIso8601String(),
   };
 }

@@ -23,7 +23,7 @@ class AppTheme {
     primaryColor: primaryColor,
     scaffoldBackgroundColor: backgroundColor,
     appBarTheme: const AppBarTheme(
-      color: surfaceColor,
+      backgroundColor: surfaceColor,
       elevation: 1,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -122,7 +122,7 @@ class AppTheme {
     primaryColor: primaryColor,
     scaffoldBackgroundColor: const Color(0xFF121212),
     appBarTheme: const AppBarTheme(
-      color: Color(0xFF1F1F1F),
+      backgroundColor: Color(0xFF1F1F1F),
       elevation: 1,
       centerTitle: true,
       titleTextStyle: TextStyle(

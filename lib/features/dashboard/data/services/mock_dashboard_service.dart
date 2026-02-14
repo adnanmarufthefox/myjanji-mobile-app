@@ -25,7 +25,7 @@ class MockDashboardService implements DashboardService {
       VerificationStatus status,
       ) async {
     Logger.info(
-      'Mock updateDashboardStatus called for user: $userId, status: ${status.name}',
+      'Mock updateDashboardStatus called for user: $userId, status: ${status.toString().split('.').last}',
     );
     await Future.delayed(const Duration(seconds: 1));
   }

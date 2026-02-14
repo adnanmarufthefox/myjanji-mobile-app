@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'features/authentication/providers/screens/login_screen.dart';
-import 'features/authentication/providers/screens/splash_screen.dart';
-import 'features/dashboard/providers/screens/dashboard_screen.dart';
-import 'features/verification/mykad/providers/screens/mykad_verification_screen.dart';
-import 'features/verification/face/providers/screens/face_verification_screen.dart';
-import 'features/contracts/providers/screens/contracts_screen.dart';
+import 'features/authentication/presentation/screens/login_screen.dart';
+import 'features/authentication/presentation/screens/splash_screen.dart';
+import 'features/dashboard/presentation/screens/dashboard_screen.dart';
+import 'features/verification/mykad/presentation/screens/mykad_verification_screen.dart';
+import 'features/verification/face/presentation/screens/face_verification_screen.dart';
+import 'features/contracts/presentation/screens/contracts_screen.dart';
 
 class AppRoutes {
   static const String splash = '/';

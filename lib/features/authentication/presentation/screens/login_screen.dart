@@ -6,7 +6,7 @@ import 'package:myjanji/app_router.dart';
 
 /// Login screen
 class LoginScreen extends ConsumerStatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   ConsumerState<LoginScreen> createState() => _LoginScreenState();

@@ -1,5 +1,5 @@
 import 'package:myjanji/core/utils/logger.dart';
-import 'dashboard_service.dart';
+import '../services/dashboard_service.dart';
 import '../models/dashboard_model.dart';
 
 /// Dashboard repository

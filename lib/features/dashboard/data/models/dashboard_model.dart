@@ -21,7 +21,7 @@ class DashboardModel {
       userId: json['userId'] as String,
       userName: json['userName'] as String,
       verificationStatus: VerificationStatus.values.firstWhere(
-            (status) => status.name == json['verificationStatus'],
+            (status) => status.toString().split('.').last == json['verificationStatus'],
         orElse: () => VerificationStatus.pending,
       ),
       completedSteps: json['completedSteps'] as int? ?? 0,
@@ -33,7 +33,7 @@ class DashboardModel {
   Map<String, dynamic> toJson() => {
     'userId': userId,
     'userName': userName,
-    'verificationStatus': verificationStatus.name,
+    'verificationStatus': verificationStatus.toString().split('.').last,
     'completedSteps': completedSteps,
     'totalSteps': totalSteps,
     'lastUpdated': lastUpdated.toIso8601String(),
