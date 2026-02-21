@@ -45,5 +45,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+    <key>NFCReaderUsageDescription</key>
+	<string>MyJanji requires NFC to verify your appointments and physical tags.</string>
 </dict>
 </plist>
